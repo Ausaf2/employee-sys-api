@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: employee1-sys-api
+/employee:
+  get:
+    displayName: Retrieve employee
+    description: Retrieve employee by empid
+    queryParameters:
+      empId:
+          type: string
+          description: "EmpId"
+          example: "342343"
+          required: true
+    responses:
+      200:
+        description: Success repsonse of employee
+        body:
+          application/json:
+            example:
+              {"Id":1,
+              "name" : "Ausaf",
+              "salary" : 50000}
+ 
